@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7228984698398254643}
   - component: {fileID: 7228984698398254642}
   - component: {fileID: 3203746208477663259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blocker
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2f0e19b231905914cbb1573e6962387d, type: 3}
-  m_Color: {r: 0.26606274, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -126,6 +126,6 @@ MonoBehaviour:
   swapkey: 32
   startAngle: 0
   isRed: 0
-  moveSpeed: 0.01
+  moveSpeed: 0.015
   redShade: {r: 1, g: 0, b: 0, a: 1}
   blueShade: {r: 0, g: 0, b: 1, a: 1}

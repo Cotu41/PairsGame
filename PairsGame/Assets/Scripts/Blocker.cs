@@ -14,12 +14,16 @@ public class Blocker : MonoBehaviour
     public float startAngle = 0;
     float angle = 0;
     float radius;
+
     public bool isRed = false;
+
     public float moveSpeed = 1;
 
     public Color redShade, blueShade;
 
     SpriteRenderer renderer;
+    Rigidbody2D body;
+    Collider2D collider;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +31,7 @@ public class Blocker : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         radius = Mathf.Abs((transform.position).magnitude); // distance from zero
         angle = Mathf.Deg2Rad*startAngle;
-
+        collider = GetComponent<Collider2D>();
 
         if (redShade == null) redShade = Color.red;
         if (blueShade == null) blueShade = Color.blue;
@@ -36,8 +40,16 @@ public class Blocker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRed) renderer.color = redShade;
-        else renderer.color = blueShade;
+        if (isRed)
+        {
+            renderer.color = redShade;
+            gameObject.layer = 11;
+        }
+        else
+        {
+            renderer.color = blueShade;
+            gameObject.layer = 10;
+        }
 
         if (Input.GetKeyDown(swapkey)) isRed = !isRed;
 
@@ -51,7 +63,14 @@ public class Blocker : MonoBehaviour
 
             
 
+            transform.rotation = Quaternion.Euler(0, 0, angle*Mathf.Rad2Deg);
             transform.position = new Vector3(x, y, transform.position.z);
         }
+
+        
     }
+
+    
+
+    
 }

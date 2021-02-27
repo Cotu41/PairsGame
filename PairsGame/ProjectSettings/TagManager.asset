@@ -15,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - BlueProjectile
+  - RedProjectile
+  - BlueBlocker
+  - RedBlocker
   - 
   - 
   - 

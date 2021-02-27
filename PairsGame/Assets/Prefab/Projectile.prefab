@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3938036420774755802}
   - component: {fileID: 9015824346881658992}
   - component: {fileID: -6760347681627308799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3b6f96617cf71bd45992d4d72ff33f12, type: 3}
-  m_Color: {r: 0, g: 0.021962643, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

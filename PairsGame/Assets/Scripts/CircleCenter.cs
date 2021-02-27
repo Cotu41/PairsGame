@@ -39,4 +39,11 @@ public class CircleCenter : MonoBehaviour
             yield return new WaitForSeconds(secondsPerSpawn);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(collision.gameObject);
+    }
+
+
 }
