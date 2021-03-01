@@ -38,7 +38,10 @@ public class CircleCenter : MonoBehaviour
         {
             float salvo_angle = Random.Range(0, 359);
             Coroutine salvo = StartCoroutine(SpawnSalvo(salvo_angle, 3, 10));
+            yield return new WaitForSeconds(1);
+            Coroutine opp_salvo = StartCoroutine(SpawnSalvo(salvo_angle + 180, 3, 10));
             yield return salvo;
+            yield return opp_salvo;
             yield return new WaitForSeconds(secondsPerSalvo);
         }
     }
