@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -34,6 +36,10 @@ public class HeartIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
         if (hearts < 0) hearts = 0; // clamp it at 0
         if (hearts == 0 && !hit_zero)
             OnPlayerDeath?.Invoke(); // sends out an event that the player is out of health
